@@ -12,7 +12,7 @@ class User(AbstractUser):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100, unique=True)
     password = models.TextField()
-    is_admin = models.BooleanField(default=False)
+    verified = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'identity_no'
     REQUIRED_FIELDS = []
